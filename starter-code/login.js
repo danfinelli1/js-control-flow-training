@@ -1,34 +1,14 @@
-var securityQuestions = [];
-securityQuestions[0]={
-  question: "What was your first name?",
-  expectedAnswer: "Dan"};
+var userLogin = {
+  username: "blueharry",
+  password: "butt1234"
+};
 
-securityQuestions[1]={
-  question: "What was your first pet's name?",
-  expectedAnswer: "turtle"};
+var userInput = window.prompt("Please enter password for "+userLogin.username+".");
 
-securityQuestions[2]={
-  question: "What is your favorite make and model of a car?",
-  expectedAnswer: "chevy blazer"};
-
-var userAnswer = window.prompt(securityQuestions[0].question);
-
-if (userAnswer === securityQuestions[0].expectedAnswer){
-  userAnswer = window.prompt(securityQuestions[1].question);
-  if(userAnswer === securityQuestions[1].expectedAnswer){
-    userAnswer = window.prompt(securityQuestions[2].question);
-    if(userAnswer === securityQuestions[2].expectedAnswer){
-      console.log('congrats! youre in!');
-    } else {
-      console.log('incorrect');
-    }
-  } else {
-    console.log('incorrect');
-  }
+if(userInput === userLogin.password){
+  console.log('thats correct');
 } else {
-  console.log('incorrect');
-
+  console.log('thats incorrect');
 }
-
 
 console.log("login.js loaded");
